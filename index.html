@@ -1,5 +1,3 @@
-Daniel portfolio · HTML
-Copy
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,9 +11,7 @@ Copy
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
  
 <style>
-/* ══════════════════════════════════════
-   CSS VARIABLES
-══════════════════════════════════════ */
+
 :root{
   --orange: #FF4500;
   --orange-dim: rgba(255,69,0,0.1);
@@ -31,9 +27,7 @@ Copy
   --font-mono: 'DM Mono', monospace;
 }
  
-/* ══════════════════════════════════════
-   RESET & BASE
-══════════════════════════════════════ */
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
@@ -43,23 +37,19 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
 }
- 
-/* Grain texture */
+
 body::after {
   content: '';
   position: fixed; inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)' opacity='0.06'/%3E%3C/svg%3E");
   pointer-events: none; z-index: 9000; opacity: .45;
 }
- 
-/* Scrollbar */
+
 ::-webkit-scrollbar { width: 2px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--orange); }
  
-/* ══════════════════════════════════════
-   PAGE SYSTEM
-══════════════════════════════════════ */
+
 .page {
   display: none;
   min-height: 100vh;
@@ -72,9 +62,7 @@ body::after {
   to   { opacity: 1; transform: translateY(0); }
 }
  
-/* ══════════════════════════════════════
-   NAVIGATION
-══════════════════════════════════════ */
+
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 500;
   padding: 1.25rem 2.5rem;
@@ -115,9 +103,7 @@ nav {
 }
 .hire-btn:hover { background: #e03d00; box-shadow: 0 4px 20px rgba(255,69,0,.3); }
  
-/* ══════════════════════════════════════
-   MOBILE MENU
-══════════════════════════════════════ */
+
 .hamburger {
   display: none; flex-direction: column; gap: 5px;
   cursor: pointer; background: none; border: none; padding: .4rem;
@@ -147,9 +133,7 @@ nav {
 }
 .mob-link:hover, .mob-link.active { color: var(--orange); }
  
-/* ══════════════════════════════════════
-   PAGE DOTS (desktop sidebar)
-══════════════════════════════════════ */
+
 .page-dots {
   position: fixed; right: 1.5rem; top: 50%; transform: translateY(-50%);
   display: flex; flex-direction: column; gap: .8rem; z-index: 400;
@@ -165,18 +149,14 @@ nav {
   height: 20px; border-radius: 3px;
 }
  
-/* ══════════════════════════════════════
-   PROGRESS BAR
-══════════════════════════════════════ */
+
 .progress {
   position: fixed; top: 0; left: 0;
   height: 2px; background: var(--orange);
   z-index: 600; width: 0%; transition: width .1s;
 }
  
-/* ══════════════════════════════════════
-   SECTION LABEL
-══════════════════════════════════════ */
+
 .sec-label {
   font-family: var(--font-mono);
   font-size: .58rem; letter-spacing: .25em; text-transform: uppercase;
@@ -185,9 +165,7 @@ nav {
 }
 .sec-label::after { content: ''; flex: 0 0 32px; height: 1px; background: var(--orange); }
  
-/* ══════════════════════════════════════
-   BUTTONS
-══════════════════════════════════════ */
+
 .btn-fill {
   font-family: var(--font-mono);
   font-size: .62rem; letter-spacing: .2em; text-transform: uppercase;
@@ -206,18 +184,14 @@ nav {
 }
 .btn-ghost:hover { border-color: var(--orange); color: var(--orange); transform: translateY(-2px); }
  
-/* ══════════════════════════════════════
-   REVEAL ANIMATION
-══════════════════════════════════════ */
+
 .reveal {
   opacity: 0; transform: translateY(18px);
   transition: opacity .65s ease, transform .65s ease;
 }
 .reveal.show { opacity: 1; transform: none; }
  
-/* ══════════════════════════════════════
-   FOOTER
-══════════════════════════════════════ */
+
 .footer {
   border-top: 1px solid var(--border);
   padding: 1.4rem 2.5rem;
@@ -235,9 +209,7 @@ nav {
 }
 .footer-nav:hover { color: var(--orange); }
  
-/* ══════════════════════════════════════
-   CUSTOM CURSOR (desktop only)
-══════════════════════════════════════ */
+
 @media(pointer: fine) {
   body { cursor: none; }
   .cd {
@@ -252,9 +224,7 @@ nav {
   }
 }
  
-/* ══════════════════════════════════════
-   PAGE 1 — HOME
-══════════════════════════════════════ */
+
 .hero-wrap {
   min-height: 100vh;
   display: flex; flex-direction: column; justify-content: center;
@@ -297,7 +267,7 @@ nav {
  
 .cta-row { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
  
-/* Decorative elements */
+
 .hero-deco-v {
   position: absolute; right: 20%; top: 0; bottom: 0; width: 1px;
   background: linear-gradient(180deg, transparent, var(--border) 25%, var(--border) 75%, transparent);
@@ -324,7 +294,7 @@ nav {
   pointer-events: none; user-select: none;
 }
  
-/* MARQUEE */
+
 .marquee-bar {
   overflow: hidden;
   border-top: 2px solid var(--orange);
@@ -348,9 +318,7 @@ nav {
 }
 .mitem::after { content: '◆'; color: var(--orange); font-size: .6rem; margin-left: 2rem; }
  
-/* ══════════════════════════════════════
-   PAGE 2 — ABOUT
-══════════════════════════════════════ */
+
 .about-wrap { min-height: 100vh; padding: 9rem 2.5rem 5rem; }
 .about-max  { max-width: 1100px; margin: 0 auto; }
  
@@ -378,9 +346,7 @@ nav {
 .snum b { color: var(--orange); }
 .slbl { font-family: var(--font-mono); font-size: .58rem; letter-spacing: .15em; text-transform: uppercase; color: var(--muted); margin-top: .45rem; }
  
-/* ══════════════════════════════════════
-   PAGE 3 — SKILLS
-══════════════════════════════════════ */
+
 .skills-wrap { min-height: 100vh; padding: 9rem 2.5rem 5rem; }
 .skills-max  { max-width: 900px; margin: 0 auto; }
  
@@ -431,9 +397,7 @@ nav {
 .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--border2); }
 .dot.on { background: var(--orange); }
  
-/* ══════════════════════════════════════
-   PAGE 4 — WORK
-══════════════════════════════════════ */
+
 .work-wrap { min-height: 100vh; padding: 9rem 2.5rem 5rem; }
 .work-max  { max-width: 1100px; margin: 0 auto; }
  
@@ -489,9 +453,7 @@ nav {
 .two-col { display: grid; grid-template-columns: 1fr; gap: 1px; background: var(--border); }
 @media(min-width: 768px) { .two-col { grid-template-columns: 1fr 1fr; } }
  
-/* ══════════════════════════════════════
-   PAGE 5 — CONTACT
-══════════════════════════════════════ */
+
 .contact-wrap {
   min-height: 100vh; padding: 9rem 2.5rem 5rem;
   display: flex; flex-direction: column; justify-content: center;
@@ -546,16 +508,14 @@ nav {
 </head>
 <body>
  
-<!-- Custom cursor (desktop) -->
+
 <div class="cd" id="cd"></div>
 <div class="cr" id="cr"></div>
  
-<!-- Scroll progress bar -->
+
 <div class="progress" id="prog"></div>
  
-<!-- ══════════════════════════════════════
-     NAVIGATION
-══════════════════════════════════════ -->
+
 <nav>
   <div class="logo" onclick="go('home')">D<span>.</span></div>
  
@@ -569,7 +529,7 @@ nav {
  
   <button class="hire-btn" onclick="go('contact')">HIRE ME</button>
  
-  <!-- Hamburger (mobile) -->
+
   <button class="hamburger" id="ham" onclick="mob()">
     <span class="ham-line"></span>
     <span class="ham-line"></span>
@@ -577,7 +537,6 @@ nav {
   </button>
 </nav>
  
-<!-- Mobile fullscreen menu -->
 <div class="mob-menu" id="mobMenu">
   <span class="mob-link" data-mp="home"    onclick="go('home');mob()">Home</span>
   <span class="mob-link" data-mp="about"   onclick="go('about');mob()">About</span>
@@ -595,10 +554,7 @@ nav {
   <div class="pdot"        data-d="contact" onclick="go('contact')"></div>
 </div>
  
- 
-<!-- ══════════════════════════════════════
-     PAGE 1 — HOME
-══════════════════════════════════════ -->
+
 <div class="page active" id="page-home">
  
   <div class="hero-wrap">
@@ -629,7 +585,7 @@ nav {
     </div>
   </div>
  
-  <!-- Scrolling marquee -->
+
   <div class="marquee-bar">
     <div class="marquee-inner">
       <span class="mitem">DEVELOPMENT</span>
@@ -640,7 +596,7 @@ nav {
       <span class="mitem">NEXT.JS</span>
       <span class="mitem">FIGMA</span>
       <span class="mitem">TAILWIND</span>
-      <!-- duplicate for seamless loop -->
+      
       <span class="mitem">DEVELOPMENT</span>
       <span class="mitem">HTML &amp; CSS</span>
       <span class="mitem">JAVASCRIPT</span>
@@ -657,12 +613,10 @@ nav {
     <span class="footer-txt">Web Developer</span>
   </div>
  
-</div><!-- /page-home -->
+</div>
  
  
-<!-- ══════════════════════════════════════
-     PAGE 2 — ABOUT
-══════════════════════════════════════ -->
+
 <div class="page" id="page-about">
  
   <div class="about-wrap">
@@ -672,14 +626,14 @@ nav {
  
       <div class="about-grid">
  
-        <!-- Left: Big heading -->
+        
         <div>
           <h2 class="about-h reveal">
             I build<br/>things<br/>for the<br/>web.
           </h2>
         </div>
  
-        <!-- Right: Bio + stats -->
+        
         <div class="reveal" style="transition-delay:.1s">
           <p class="about-p">
             I'm a website developer who turns ideas into fast, beautiful digital experiences. Whether it's a landing page, a full web app, or something in between — I bring it to life with clean, maintainable code.
@@ -690,7 +644,7 @@ nav {
  
           <button class="btn-fill" style="margin-bottom:3rem" onclick="go('contact')">LET'S TALK →</button>
  
-          <!-- Stats grid -->
+          
           <div class="stats">
             <div class="stat-box">
               <div class="snum">3<b>+</b></div>
@@ -720,12 +674,10 @@ nav {
     <span class="footer-nav" onclick="go('skills')">Skills →</span>
   </div>
  
-</div><!-- /page-about -->
+</div>
  
  
-<!-- ══════════════════════════════════════
-     PAGE 3 — SKILLS
-══════════════════════════════════════ -->
+
 <div class="page" id="page-skills">
  
   <div class="skills-wrap">
@@ -833,7 +785,7 @@ nav {
           </div>
         </div>
  
-      </div><!-- /skill-list -->
+      </div>
  
     </div>
   </div>
@@ -843,12 +795,8 @@ nav {
     <span class="footer-nav" onclick="go('work')">Work →</span>
   </div>
  
-</div><!-- /page-skills -->
- 
- 
-<!-- ══════════════════════════════════════
-     PAGE 4 — WORK
-══════════════════════════════════════ -->
+</div>
+
 <div class="page" id="page-work">
  
   <div class="work-wrap">
@@ -858,7 +806,7 @@ nav {
  
       <div class="proj-list reveal" style="transition-delay:.08s">
  
-        <!-- 01 Featured -->
+       
         <div class="proj-card feat">
           <div class="proj-top">
             <span class="proj-num f">01 — Featured</span>
@@ -874,7 +822,7 @@ nav {
           </div>
         </div>
  
-        <!-- 02 + 03 side by side -->
+       
         <div class="two-col">
           <div class="proj-card">
             <div class="proj-top">
@@ -905,7 +853,7 @@ nav {
           </div>
         </div>
  
-        <!-- 04 Full width -->
+  
         <div class="proj-card">
           <div class="proj-top">
             <span class="proj-num">04</span>
@@ -922,7 +870,7 @@ nav {
           </div>
         </div>
  
-      </div><!-- /proj-list -->
+      </div>
  
     </div>
   </div>
@@ -932,12 +880,8 @@ nav {
     <span class="footer-nav" onclick="go('contact')">Contact →</span>
   </div>
  
-</div><!-- /page-work -->
- 
- 
-<!-- ══════════════════════════════════════
-     PAGE 5 — CONTACT
-══════════════════════════════════════ -->
+</div>
+
 <div class="page" id="page-contact">
  
   <div class="contact-wrap">
@@ -951,7 +895,6 @@ nav {
  
       <div class="contact-grid">
  
-        <!-- Left: email + socials -->
         <div class="reveal" style="transition-delay:.12s">
           <p class="contact-p">
             Got a project in mind? I'm open to freelance work and collaborations. Send me a message and let's make something great together.
@@ -988,14 +931,11 @@ nav {
     <span class="footer-txt">Built with passion &amp; precision.</span>
   </div>
  
-</div><!-- /page-contact -->
+</div>
  
- 
-<!-- ══════════════════════════════════════
-     JAVASCRIPT
-══════════════════════════════════════ -->
+
 <script>
-/* ── PAGE ROUTING ── */
+
 let cur = 'home';
  
 function switchPage(id) {
@@ -1004,11 +944,11 @@ function switchPage(id) {
   const next = document.getElementById('page-' + id);
   next.classList.add('active');
   window.scrollTo(0, 0);
-  // Update nav links
+
   document.querySelectorAll('.nav-link').forEach(l => l.classList.toggle('active', l.dataset.p === id));
-  // Update side dots
+
   document.querySelectorAll('.pdot').forEach(d => d.classList.toggle('active', d.dataset.d === id));
-  // Update mobile menu links
+
   document.querySelectorAll('.mob-link').forEach(l => l.classList.toggle('active', l.dataset.mp === id));
   requestAnimationFrame(() => reveal(next));
 }
@@ -1019,13 +959,13 @@ function go(id) {
   switchPage(id);
 }
  
-/* ── BROWSER BACK / FORWARD BUTTON ── */
+
 window.addEventListener('popstate', e => {
   const id = (e.state && e.state.page) ? e.state.page : 'home';
   switchPage(id);
 });
  
-/* ── HANDLE DIRECT URL HASH ON LOAD ── */
+
 window.addEventListener('load', () => {
   const hash = location.hash.replace('#', '');
   const valid = ['home', 'about', 'skills', 'work', 'contact'];
@@ -1035,7 +975,7 @@ window.addEventListener('load', () => {
   reveal(document.getElementById('page-' + startPage));
 });
  
-/* ── REVEAL ANIMATIONS ── */
+
 function reveal(scope) {
   (scope || document).querySelectorAll('.reveal').forEach((el, i) => {
     el.classList.remove('show');
@@ -1043,13 +983,13 @@ function reveal(scope) {
   });
 }
  
-/* ── MOBILE MENU TOGGLE ── */
+
 function mob() {
   document.getElementById('mobMenu').classList.toggle('open');
   document.getElementById('ham').classList.toggle('open');
 }
  
-/* ── SWIPE GESTURES (mobile left/right) ── */
+
 const allPages = ['home', 'about', 'skills', 'work', 'contact'];
 let touchX = 0, touchY = 0;
  
@@ -1069,7 +1009,7 @@ document.addEventListener('touchend', e => {
   }
 }, { passive: true });
  
-/* ── CUSTOM CURSOR (desktop only) ── */
+
 const cd = document.getElementById('cd');
 const cr = document.getElementById('cr');
 if (cd && cr) {
@@ -1090,7 +1030,7 @@ if (cd && cr) {
   });
 }
  
-/* ── SCROLL PROGRESS BAR ── */
+
 window.addEventListener('scroll', () => {
   const d = document.documentElement;
   const pct = (d.scrollTop / (d.scrollHeight - d.clientHeight)) * 100;
